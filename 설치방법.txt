@@ -1,0 +1,109 @@
+
+https://jrc-park.tistory.com/190
+
+
+C:\Projects\anaconda3
+C:\Projects\anaconda3\Scripts
+C:\Projects\anaconda3\Library\bin
+
+conda update conda
+python --version
+conda --version
+
+conda env list
+conda update -n base conda
+
+conda create -n main python=3.9
+conda create -n nunbit python=3.9
+conda init
+conda activate main
+conda activate nunbit
+
+
+conda deactivate
+conda env remove -n main
+conda env remove -n nunbit
+
+
+C:\Users\usik2\anaconda3
+C:\Users\usik2\anaconda3\Scripts
+C:\Users\usik2\anaconda3\Library\bin
+
+C:\Users\%USERNAME%\Anaconda3\Library\bin 경로 열기
+
+해당 오류시
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+If using 'conda deactivate' from a batch script, change your
+invocation to 'CALL conda.bat deactivate'.
+
+아나콘다 프롬프트 가서 
+conda deactivate
+conda activate main
+실행
+
+
+파워쉘에서 명령어 입력시 python 치고  들어갈것
+
+해당 오류시
+Collecting package metadata (current_repodata.json): failed
+CondaHTTPError: HTTP 000 CONNECTION FAILED for url <https://repo.anaconda.com/pkgs/main/win-64/current_repodata.json>
+
+"아나콘다경로/Library/bin/" 경로 열기
+다음 네 가지 파일들을 복사
+
+libcrypto-1_1-x64.dll
+libcrypto-1_1-x64.pdb
+libssl-1_1-x64.dll
+libssl-1_1-x64.pdb
+
+"아나콘다경로/DLLs" 경로에 붙여넣기
+
+
+c:\users\usik\anaconda3\envs\main\lib\
+
+{
+  "guid": "{9b7fc384-7442-4eb1-96ae-f19c99645078}",
+  "hidden": false,
+  "name": "conda Powershell",
+  "commandline": "%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& 'C:\\Projects\\anaconda3\\shell\\condabin\\conda-hook.ps1' ; conda activate 'C:\\Projects\\anaconda3' \""
+}
+
+
+base 9b7fc384-7442-4eb1-96ae-f19c99645078
+nunbit 37723350-0a27-454a-b11a-42e5b8a73a2c
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+에러 뜰때
+
+conda install -c conda-forge 패키지명
+
+
+USB 시스템에 부착된 장치가 작동하지 않습니다.
+
+options = webdriver.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
+browser = webdriver.Chrome(options=options)
+
+에디터 터미널 와리가리 단축키
+
+(1) ctrl+shift+P 를 눌러 preferences: Open Keyboard Shortcuts (JSON) 선택
+
+
+// 키 바인딩을 이 파일에 넣어서 기본값 재정의
+[
+    // 에디터 터미널 와리가리 단축키
+    {
+      "key": "ctrl+;",
+      "command": "terminal.focus",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+;",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "terminalFocus"
+    }
+]
+
+가상환경 복제하여 새로 생성
+$ conda create -n [env-name] --clone [src-env-name]
