@@ -11,8 +11,8 @@ class House:
     def show_detail(self):
         print(self.location, self.house_type, self.deal_type, 
         self.price, self.completion_year)
-
-
+  
+  
 houses = []
 house1 = House("강남", "아파트", "매매", "10억", "2010년")
 house2 = House("마포", "오피스텔", "전세", "5억", "2007년")
