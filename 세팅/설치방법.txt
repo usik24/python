@@ -110,3 +110,5 @@ $ conda create -n [env-name] --clone [src-env-name]
 
 code runner 세팅
 set PYTHONIOENCODING=utf8 && python -u
+
+YYYY-MM-DD hh:mm:ss
